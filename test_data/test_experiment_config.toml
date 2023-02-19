@@ -1,0 +1,76 @@
+# Test Experiment configuration file for SCRUF-D
+# Data Details: 10 users, 100 items, 2 protected features, 2 agents
+
+[location]
+path = "./data/test_data/"
+overwrite = "true"
+
+[data]
+rec_filename = "recs.csv"
+feature_filename = "item.csv"
+
+[output]
+filename = "history_file.json"
+
+[parameters]
+list_size = 10
+iterations = -1 # -1 means run through all the users
+initialize = "skip"
+history_window_size = 10
+
+[context]
+context_class = "csv_context"
+
+[context.properties]
+compatibility_file = "users.csv"
+
+[feature]
+
+[feature.one]
+name = "One"
+protected_feature = "1"
+protected_values = [1]
+
+[feature.two]
+name = "Two"
+protected_feature = "2"
+protected_values = [1]
+
+[agent]
+
+[agent.one]
+name = "Feature 1 Agent"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+choice_scorer_class = "value_scorer"
+
+[agent.one.metric]
+feature = "Feature 1"
+proportion = 0.75
+
+[agent.one.scorer]
+protected_score_value = 0.5
+protected_feature = "Feature 1"
+
+[agent.two]
+name = "Feature 2 Agent"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+choice_scorer_class = "value_scorer"
+
+[agent.two.metric]
+feature = "Feature 2"
+proportion = 0.5
+
+[agent.two.scorer]
+protected_score_value = 0.5
+protected_feature = "Feature 2"
+
+[allocation]
+allocation_class = "least_fair"
+
+[choice]
+choice_class = "weighted_rescore"
+
+[choice.properties]
+recommender_weight = 1.0
