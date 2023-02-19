@@ -2,7 +2,7 @@
 # Data Details: 10 users, 100 items, 2 protected features, 2 agents
 
 [location]
-path = "./test_data/"
+path = "."
 overwrite = "true"
 
 [data]
@@ -42,29 +42,29 @@ protected_values = [1]
 name = "Feature 1 Agent"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
-choice_scorer_class = "value_scorer"
+choice_scorer_class = "fixed_value"
 
 [agent.one.metric]
-feature = "Feature 1"
+feature = "One"
 proportion = 0.75
 
 [agent.one.scorer]
 protected_score_value = 0.5
-protected_feature = "Feature 1"
+protected_feature = "One"
 
 [agent.two]
 name = "Feature 2 Agent"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
-choice_scorer_class = "value_scorer"
+choice_scorer_class = "fixed_value"
 
 [agent.two.metric]
-feature = "Feature 2"
+feature = "Two"
 proportion = 0.5
 
 [agent.two.scorer]
 protected_score_value = 0.5
-protected_feature = "Feature 2"
+protected_feature = "Two"
 
 [allocation]
 allocation_class = "least_fair"
