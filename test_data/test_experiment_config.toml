@@ -2,7 +2,7 @@
 # Data Details: 10 users, 100 items, 2 protected features, 2 agents
 
 [location]
-path = "./data/test_data/"
+path = "./test_data/"
 overwrite = "true"
 
 [data]
