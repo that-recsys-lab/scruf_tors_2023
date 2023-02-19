@@ -2,12 +2,12 @@
 # Data Details: 10 users, 100 items, 2 protected features, 2 agents
 
 [location]
-path = "your_path/here"
+path = "./data/test_data/"
 overwrite = "true"
 
 [data]
 rec_filename = "recs.csv"
-feature_filename = "items.csv"
+feature_filename = "item.csv"
 
 [output]
 filename = "history_file.json"
@@ -39,32 +39,38 @@ protected_values = [1]
 [agent]
 
 [agent.one]
-name = "One"
-metric_class = "proportional_fair"
-compatibility = "entropy"
+name = "Feature 1 Agent"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+choice_scorer_class = "value_scorer"
 
 [agent.one.metric]
-feature = "One"
-proportion = 0.3
+feature = "Feature 1"
+proportion = 0.75
+
+[agent.one.scorer]
+protected_score_value = 0.5
+protected_feature = "Feature 1"
 
 [agent.two]
-name = "Two"
-metric_class = "list_exposure"
-compatibility_class = "entropy"
+name = "Feature 2 Agent"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+choice_scorer_class = "value_scorer"
 
 [agent.two.metric]
-feature = "Two"
+feature = "Feature 2"
+proportion = 0.5
+
+[agent.two.scorer]
+protected_score_value = 0.5
+protected_feature = "Feature 2"
 
 [allocation]
-algorithm = "weighted_product_allocation"
-
-[allocation.properties]
-fairness_exponent = 1.0
-compatibility_exponent = 0.7
+allocation_class = "least_fair"
 
 [choice]
-algorithm = "fixed_utility"
+choice_class = "weighted_rescore"
 
 [choice.properties]
-delta = 0.5
-alpha = 0.2
+recommender_weight = 1.0
