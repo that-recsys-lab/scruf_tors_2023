@@ -1,0 +1,70 @@
+# Test Experiment configuration file for SCRUF-D
+# Data Details: 10 users, 100 items, 2 protected features, 2 agents
+
+[location]
+path = "your_path/here"
+overwrite = "true"
+
+[data]
+rec_filename = "recs.csv"
+feature_filename = "items.csv"
+
+[output]
+filename = "history_file.json"
+
+[parameters]
+list_size = 10
+iterations = -1 # -1 means run through all the users
+initialize = "skip"
+history_window_size = 10
+
+[context]
+context_class = "csv_context"
+
+[context.properties]
+compatibility_file = "users.csv"
+
+[feature]
+
+[feature.one]
+name = "One"
+protected_feature = "1"
+protected_values = [1]
+
+[feature.two]
+name = "Two"
+protected_feature = "2"
+protected_values = [1]
+
+[agent]
+
+[agent.one]
+name = "One"
+metric_class = "proportional_fair"
+compatibility = "entropy"
+
+[agent.one.metric]
+feature = "One"
+proportion = 0.3
+
+[agent.two]
+name = "Two"
+metric_class = "list_exposure"
+compatibility_class = "entropy"
+
+[agent.two.metric]
+feature = "Two"
+
+[allocation]
+algorithm = "weighted_product_allocation"
+
+[allocation.properties]
+fairness_exponent = 1.0
+compatibility_exponent = 0.7
+
+[choice]
+algorithm = "fixed_utility"
+
+[choice.properties]
+delta = 0.5
+alpha = 0.2
