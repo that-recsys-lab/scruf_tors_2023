@@ -64,7 +64,7 @@ protected_score_value = 0.5
 protected_feature = "Two"
 
 [allocation]
-allocation_class = "static_allocation_lottery"
+allocation_class = "static_lottery"
 weights = [["Feature 1 Agent", "0.7"], ["Feature 2 Agent", "0.3"]]
 no_agent_probability = 0.1
 

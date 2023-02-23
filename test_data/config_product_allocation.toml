@@ -64,7 +64,7 @@ protected_score_value = 0.5
 protected_feature = "Two"
 
 [allocation]
-allocation_class = "product_allocation_lottery"
+allocation_class = "product_lottery"
 no_agent_probability = 0.1
 
 [choice]
