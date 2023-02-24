@@ -36,7 +36,7 @@ protected_values = [1]
 [agent]
 
 [agent.one]
-name = "Feature 1 Agent"
+name = "Agent1"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
 choice_scorer_class = "fixed_value"
@@ -50,7 +50,7 @@ protected_score_value = 0.5
 protected_feature = "One"
 
 [agent.two]
-name = "Feature 2 Agent"
+name = "Agent2"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
 choice_scorer_class = "fixed_value"
