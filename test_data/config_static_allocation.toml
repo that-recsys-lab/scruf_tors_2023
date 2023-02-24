@@ -36,7 +36,7 @@ protected_values = [1]
 [agent]
 
 [agent.one]
-name = "Feature 1 Agent"
+name = "Agent1"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
 choice_scorer_class = "fixed_value"
@@ -50,7 +50,7 @@ protected_score_value = 0.5
 protected_feature = "One"
 
 [agent.two]
-name = "Feature 2 Agent"
+name = "Agent2"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
 choice_scorer_class = "fixed_value"
@@ -65,7 +65,7 @@ protected_feature = "Two"
 
 [allocation]
 allocation_class = "static_lottery"
-weights = [["Feature 1 Agent", "0.7"], ["Feature 2 Agent", "0.3"]]
+weights = [["Agent1", "0.7"], ["Agent2", "0.3"]]
 no_agent_probability = 0.1
 
 [choice]
