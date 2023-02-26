@@ -1,0 +1,94 @@
+# Data Details: 1000 users, 100 items, 2 protected features, 3 agents
+
+[location]
+path = "../../"
+overwrite = "true"
+
+[data]
+rec_filename = "recs.csv"
+feature_filename = "item.csv"
+
+[output]
+filename = "history_file_least_misery.json"
+
+[parameters]
+list_size = 10
+iterations = -1 # -1 means run through all the users
+initialize = "skip"
+history_window_size = 10
+
+[context]
+context_class = "csv_context"
+
+[context.properties]
+compatibility_file = "compat.csv"
+
+[feature]
+
+[feature.one]
+name = "One"
+protected_feature = "1"
+protected_values = [1]
+
+[feature.two]
+name = "Two"
+protected_feature = "2"
+protected_values = [1]
+
+[feature.two]
+name = "Three"
+protected_feature = "3"
+protected_values = [1]
+
+[agent]
+
+[agent.one]
+name = "Agent1"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+choice_scorer_class = "fixed_value"
+
+[agent.one.metric]
+feature = "One"
+proportion = 0.75
+
+[agent.one.scorer]
+protected_score_value = 0.5
+protected_feature = "One"
+
+[agent.two]
+name = "Agent2"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+choice_scorer_class = "fixed_value"
+
+[agent.two.metric]
+feature = "Two"
+proportion = 0.5
+
+[agent.two.scorer]
+protected_score_value = 0.5
+protected_feature = "Two"
+
+[agent.three]
+name = "Agent3"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+choice_scorer_class = "fixed_value"
+
+[agent.three.metric]
+feature = "Three"
+proportion = 0.5
+
+[agent.three.scorer]
+protected_score_value = 0.5
+protected_feature = "Three"
+
+[allocation]
+allocation_class = "least_fair"
+
+[choice]
+choice_class = "weighted_rescore"
+
+[choice.properties]
+recommender_weight = 1.0
