@@ -1,7 +1,7 @@
 # Data Details: 1000 users, 100 items, 2 protected features, 3 agents
 
 [location]
-path = "../../"
+path = "../"
 overwrite = "true"
 
 [data]
@@ -35,7 +35,7 @@ name = "Two"
 protected_feature = "2"
 protected_values = [1]
 
-[feature.two]
+[feature.three]
 name = "Three"
 protected_feature = "3"
 protected_values = [1]
