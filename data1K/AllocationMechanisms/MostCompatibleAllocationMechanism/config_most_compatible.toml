@@ -9,7 +9,7 @@ rec_filename = "recs.csv"
 feature_filename = "item.csv"
 
 [output]
-filename = "history_file_least_misery.json"
+filename = "history_file_most_compatibile.json"
 
 [parameters]
 list_size = 10
