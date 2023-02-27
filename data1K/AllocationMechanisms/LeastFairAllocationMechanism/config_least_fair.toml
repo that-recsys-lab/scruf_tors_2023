@@ -1,7 +1,7 @@
 # Data Details: 1000 users, 100 items, 2 protected features, 3 agents
 
 [location]
-path = "../"
+path = "../../data"
 overwrite = "true"
 
 [data]
