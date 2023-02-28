@@ -66,6 +66,11 @@ protected_feature = "Two"
 [allocation]
 allocation_class = "weighted_product"
 
+[allocation.properties]
+fairness_exponent = 3
+compatability_exponent = 2
+
+
 [choice]
 choice_class = "weighted_rescore"
 
