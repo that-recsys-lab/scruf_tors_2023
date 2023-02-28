@@ -33,11 +33,6 @@ name = "Two"
 protected_feature = "2"
 protected_values = [1]
 
-[feature.three]
-name = "Three"
-protected_feature = "3"
-protected_values = [1]
-
 [agent]
 
 [agent.one]
@@ -67,20 +62,6 @@ proportion = 0.5
 [agent.two.scorer]
 protected_score_value = 0.5
 protected_feature = "Two"
-
-[agent.three]
-name = "Agent3"
-metric_class = "proportional_item"
-compatibility_class = "context_compatibility"
-choice_scorer_class = "fixed_value"
-
-[agent.three.metric]
-feature = "Three"
-proportion = 0.25
-
-[agent.three.scorer]
-protected_score_value = 0.5
-protected_feature = "Three"
 
 [allocation]
 allocation_class = "weighted_product_lottery"
