@@ -13,7 +13,7 @@ filename = "history_file_most_compatible_2agents.json"
 list_size = 10
 iterations = -1
 initialize = "skip"
-history_window_size = 10
+history_window_size = 100
 
 [context]
 context_class = "csv_context"
