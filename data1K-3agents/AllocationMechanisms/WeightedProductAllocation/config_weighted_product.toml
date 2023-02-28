@@ -7,7 +7,7 @@ rec_filename = "recs.csv"
 feature_filename = "item.csv"
 
 [output]
-filename = "history_file_weighted_product_2agents.json"
+filename = "history_file_weighted_product_3agents.json"
 
 [parameters]
 list_size = 10

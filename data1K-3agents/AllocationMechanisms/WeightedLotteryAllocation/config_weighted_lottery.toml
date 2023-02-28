@@ -7,7 +7,7 @@ rec_filename = "recs.csv"
 feature_filename = "item.csv"
 
 [output]
-filename = "history_file_weighted_product_2agents.json"
+filename = "history_file_weighted_lottery_3agents.json"
 
 [parameters]
 list_size = 10
@@ -83,7 +83,7 @@ protected_score_value = 0.5
 protected_feature = "Three"
 
 [allocation]
-allocation_class = "weighted_product"
+allocation_class = "weighted_product_lottery"
 
 [choice]
 choice_class = "weighted_rescore"
