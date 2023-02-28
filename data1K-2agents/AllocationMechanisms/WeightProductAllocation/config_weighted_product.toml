@@ -68,7 +68,7 @@ allocation_class = "weighted_product"
 
 [allocation.properties]
 fairness_exponent = 3
-compatability_exponent = 2
+compataibility_exponent = 2
 
 
 [choice]
