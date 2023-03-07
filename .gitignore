@@ -1,4 +1,10 @@
-
+.ipynb_checkpoints/*
 .ipynb_checkpoints/simple_history_viz-checkpoint.ipynb
 .DS_Store
 test_data/.ipynb_checkpoints/simple_history_viz-checkpoint.ipynb
+.Rhistory
+data1K-2agents/visualization_notebooks/.ipynb_checkpoints/simple_history_viz-fairness_lottery-checkpoint.ipynb
+data1K-3agents/visualization_notebook/.ipynb_checkpoints/simple_history_viz-static_lottery-weightedlottery-checkpoint.ipynb
+HistoryFiles/.ipynb_checkpoints/Untitled-checkpoint.ipynb
+data1K-2agents/Data/.ipynb_checkpoints/item-checkpoint.csv
+HistoryFiles/.ipynb_checkpoints/real-fairness-history-checkpoint.ipynb
