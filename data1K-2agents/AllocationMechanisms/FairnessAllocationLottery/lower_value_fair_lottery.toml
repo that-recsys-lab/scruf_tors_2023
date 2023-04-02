@@ -57,7 +57,7 @@ choice_scorer_class = "fixed_value"
 
 [agent.two.metric]
 feature = "Two"
-proportion = 0.1
+proportion = 0.9
 
 [agent.two.scorer]
 protected_score_value = 0.5
