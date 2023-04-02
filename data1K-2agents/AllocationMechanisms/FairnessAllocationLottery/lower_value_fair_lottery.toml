@@ -46,7 +46,7 @@ feature = "One"
 proportion = 0.75
 
 [agent.one.scorer]
-protected_score_value = 0.1
+protected_score_value = 0.5
 protected_feature = "One"
 
 [agent.two]
