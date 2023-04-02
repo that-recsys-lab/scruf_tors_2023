@@ -43,7 +43,7 @@ choice_scorer_class = "fixed_value"
 
 [agent.one.metric]
 feature = "One"
-proportion = 0.75
+proportion = 0.9
 
 [agent.one.scorer]
 protected_score_value = 0.5
@@ -57,10 +57,10 @@ choice_scorer_class = "fixed_value"
 
 [agent.two.metric]
 feature = "Two"
-proportion = 0.5
+proportion = 0.1
 
 [agent.two.scorer]
-protected_score_value = 0.1
+protected_score_value = 0.5
 protected_feature = "Two"
 
 [allocation]
