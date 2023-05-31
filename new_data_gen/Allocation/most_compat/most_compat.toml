@@ -70,6 +70,6 @@ allocation_class = "most_compatible"
 algorithm = "whalrus_scoring"
 [choice.properties]
 whalrus_rule = "RuleBorda"
-tie_breaker = "None"
-ignore_weights = true
+tie_breaker = "Random"
+ignore_weights = false
 recommender_weight = 0.8
