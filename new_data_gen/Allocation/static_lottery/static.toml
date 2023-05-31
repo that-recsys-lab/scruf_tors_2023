@@ -45,7 +45,7 @@ prefernece_function_class = "binary_preference"
 feature = "1"
 proportion = 0.9
 
-[agent.one.scorer]
+[agent.one.preference]
 delta = 0.5
 feature = "1"
 
@@ -59,7 +59,7 @@ preference_function_class = "binary_prefernece"
 feature = "2"
 proportion = 0.9
 
-[agent.two.scorer]
+[agent.two.preference]
 delta = 0.5
 feature = "2"
 
