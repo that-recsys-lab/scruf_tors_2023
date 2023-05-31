@@ -24,44 +24,44 @@ compatibility_file = "compat.csv"
 [feature]
 
 [feature.one]
-name = "One"
+name = "1"
 protected_feature = "1"
 protected_values = [1]
 
 [feature.two]
-name = "Two"
+name = "2"
 protected_feature = "2"
 protected_values = [1]
 
 [agent]
 
 [agent.one]
-name = "Agent1"
+name = "1"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
-choice_scorer_class = "fixed_value"
+preference_function_class = "binary_preference"
 
 [agent.one.metric]
-feature = "One"
-proportion = 0.75
+feature = "1"
+proportion = 0.9
 
-[agent.one.scorer]
-protected_score_value = 0.5
-protected_feature = "One"
+[agent.one.preference]
+delta = 0.5
+feature = "1"
 
 [agent.two]
-name = "Agent2"
+name = "2"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
-choice_scorer_class = "fixed_value"
+preference_function_class = "binary_preference"
 
 [agent.two.metric]
-feature = "Two"
-proportion = 0.5
+feature = "2"
+proportion = 0.9
 
-[agent.two.scorer]
-protected_score_value = 0.5
-protected_feature = "Two"
+[agent.two.preference]
+delta = 0.5
+feature = "2"
 
 [allocation]
 allocation_class = "most_compatible"

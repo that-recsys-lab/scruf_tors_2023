@@ -39,7 +39,7 @@ protected_values = [1]
 name = "1"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
-prefernece_function_class = "binary_preference"
+preference_function_class = "binary_preference"
 
 [agent.one.metric]
 feature = "1"
@@ -53,7 +53,7 @@ feature = "1"
 name = "2"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
-preference_function_class = "binary_prefernece"
+preference_function_class = "binary_preference"
 
 [agent.two.metric]
 feature = "2"
