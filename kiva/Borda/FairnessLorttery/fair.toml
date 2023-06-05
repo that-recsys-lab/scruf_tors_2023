@@ -56,7 +56,7 @@ compatibility_class = "context_compatibility"
 preference_function_class = "binary_preference"
 
 [agent.two.metric]
-feature = "2"
+feature = "COUNTRY_low_pfr"
 proportion = 0.9
 
 [agent.two.preference]
