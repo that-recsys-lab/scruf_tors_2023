@@ -1,9 +1,9 @@
-params1.num_users = 100
-params1.num_items = 1000
+params1.num_users = 500
+params1.num_items = 5000
 params1.num_factors = 3
 params1.num_agents = 2
 params1.std_dev_factors = 1.0
-params1.initial_list_size = 50
-params1.recommendation_size = 10
-params2.user_feature_propensities=[(0.0, 1.0), (0.5, 1.0), (0.9, 1.0)]
-params2.item_feature_propensities=[0.1, 0.01, 0.9]
+params1.initial_list_size = 200
+params1.recommendation_size = 50
+params2.user_feature_propensities=[(0.9, .09), (0.5, .06), (0.6, .08)]
+params2.item_feature_propensities=[0.9, 0.039, 0.05]
