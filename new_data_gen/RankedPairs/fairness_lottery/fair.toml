@@ -7,7 +7,7 @@ rec_filename = "recs.csv"
 feature_filename = "item.csv"
 
 [output]
-filename = "history_file_fairness_lottery_2agents.json"
+filename = "history_file_fairness_lottery_rankedpairs.json"
 
 [parameters]
 list_size = 10
@@ -43,10 +43,10 @@ preference_function_class = "binary_preference"
 
 [agent.one.metric]
 feature = "1"
-proportion = 0.2
+proportion = 0.07
 
 [agent.one.preference]
-delta = 0.5
+delta = 0.1
 feature = "1"
 
 [agent.two]
@@ -57,10 +57,10 @@ preference_function_class = "binary_preference"
 
 [agent.two.metric]
 feature = "2"
-proportion = 0.05
+proportion = 0.1
 
 [agent.two.preference]
-delta = 0.5
+delta = 0.1
 feature = "2"
 
 [allocation]
@@ -69,7 +69,7 @@ allocation_class = "fairness_lottery"
 [choice]
 algorithm = "whalrus_scoring"
 [choice.properties]
-whalrus_rule = "RuleBorda"
+whalrus_rule = "RuleRankedPairs"
 tie_breaker = "None"
 ignore_weights = false
 recommender_weight = 0.8

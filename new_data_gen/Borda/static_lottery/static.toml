@@ -7,7 +7,7 @@ rec_filename = "recs.csv"
 feature_filename = "item.csv"
 
 [output]
-filename = "history_file_fairness_lottery_2agents.json"
+filename = "history_file_static_lottery_borda.json"
 
 [parameters]
 list_size = 10
@@ -43,10 +43,10 @@ preference_function_class = "binary_preference"
 
 [agent.one.metric]
 feature = "1"
-proportion = 0.2
+proportion = 0.07
 
 [agent.one.preference]
-delta = 0.5
+delta = 0.1
 feature = "1"
 
 [agent.two]
@@ -57,14 +57,17 @@ preference_function_class = "binary_preference"
 
 [agent.two.metric]
 feature = "2"
-proportion = 0.05
+proportion = 0.1
 
 [agent.two.preference]
-delta = 0.5
+delta = 0.1
 feature = "2"
 
 [allocation]
-allocation_class = "fairness_lottery"
+allocation_class = "static_lottery"
+
+[allocation.properties]
+weights = [["1", "0.4"], ["2", "0.6"]]
 
 [choice]
 algorithm = "whalrus_scoring"
