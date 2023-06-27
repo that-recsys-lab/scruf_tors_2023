@@ -71,6 +71,6 @@ allocation_class = "product_lottery"
 algorithm = "whalrus_scoring"
 [choice.properties]
 whalrus_rule = "RuleCopeland"
-tie_breaker = "None"
+tie_breaker = "Random"
 ignore_weights = false
 recommender_weight = 0.8
