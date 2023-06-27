@@ -70,6 +70,6 @@ allocation_class = "least_fair"
 algorithm = "whalrus_scoring"
 [choice.properties]
 whalrus_rule = "RuleRankedPairs"
-tie_breaker = "None"
+tie_breaker = "Random"
 ignore_weights = false
 recommender_weight = 0.8
