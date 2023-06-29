@@ -7,7 +7,7 @@ rec_filename = "recs.csv"
 feature_filename = "item.csv"
 
 [output]
-filename = "history_file_most_compatible_borda.json"
+filename = "history_file_product_lottery_bordalm.json"
 
 [parameters]
 list_size = 10
@@ -19,57 +19,57 @@ history_window_size = 100
 context_class = "csv_context"
 
 [context.properties]
-compatibility_file = "compat.csv"
+compatibility_file = "compat_least_to_most.csv"
 
 [feature]
 
 [feature.one]
-name = "1"
-protected_feature = "1"
+name = "COUNTRY_low_pfr"
+protected_feature = "COUNTRY_low_pfr"
 protected_values = [1]
 
 [feature.two]
-name = "2"
-protected_feature = "2"
+name = "loan_buck_5"
+protected_feature = "loan_buck_5"
 protected_values = [1]
 
 [agent]
 
 [agent.one]
-name = "1"
+name = "COUNTRY_low_pfr"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
 preference_function_class = "binary_preference"
 
 [agent.one.metric]
-feature = "1"
-proportion = 0.07
+feature = "COUNTRY_low_pfr"
+proportion = 0.2
 
 [agent.one.preference]
 delta = 0.1
-feature = "1"
+feature = "COUNTRY_low_pfr"
 
 [agent.two]
-name = "2"
+name = "loan_buck_5"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
 preference_function_class = "binary_preference"
 
 [agent.two.metric]
-feature = "2"
-proportion = 0.1
+feature = "loan_buck_5"
+proportion = 0.3
 
 [agent.two.preference]
 delta = 0.1
-feature = "2"
+feature = "loan_buck_5"
 
 [allocation]
-allocation_class = "most_compatible"
+allocation_class = "product_lottery"
 
 [choice]
 algorithm = "whalrus_scoring"
 [choice.properties]
 whalrus_rule = "RuleBorda"
-tie_breaker = "None"
+tie_breaker = "Random"
 ignore_weights = false
 recommender_weight = 0.8

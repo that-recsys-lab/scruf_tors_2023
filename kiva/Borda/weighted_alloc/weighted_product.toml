@@ -43,7 +43,7 @@ preference_function_class = "binary_preference"
 
 [agent.one.metric]
 feature = "COUNTRY_low_pfr"
-proportion = 0.07
+proportion = 0.2
 
 [agent.one.preference]
 delta = 0.1
@@ -57,7 +57,7 @@ preference_function_class = "binary_preference"
 
 [agent.two.metric]
 feature = "loan_buck_5"
-proportion = 0.1
+proportion = 0.3
 
 [agent.two.preference]
 delta = 0.2
