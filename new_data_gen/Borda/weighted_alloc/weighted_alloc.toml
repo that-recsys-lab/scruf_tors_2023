@@ -66,6 +66,10 @@ feature = "2"
 [allocation]
 allocation_class = "weighted_product_allocation"
 
+[allocation.properties]
+compatibility_exponent = 2
+fairness_exponent = 1
+
 [choice]
 algorithm = "whalrus_scoring"
 [choice.properties]
