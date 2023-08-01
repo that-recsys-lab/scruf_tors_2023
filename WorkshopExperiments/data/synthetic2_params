@@ -1,1 +1,13 @@
+params2 = DataGenParameters()
+params2.num_items = 1000
+params2.num_user_per_propensity= [500,500,500]
+params2.num_factors = 10
+params2.num_agents = 2
+params2.std_dev_factors = 1.0
+params2.initial_list_size = 200
+params2.recommendation_size = 10
+params2.user_propensity = [[(0.1, 0.1),(0.9, 0.1),(0.4, 0.6), (0.3, 1.0),(0.6, 1.0),(0.1, 0.6), (0.4, 1.0),(0.9, 1.0),(0.1, 0.6), (0.0, 1.0)],
+                           [(0.9, 0.1),(0.1, 0.1),(0.4, 0.6), (0.3, 1.0),(0.6, 1.0),(0.1, 0.6), (0.4, 1.0),(0.9, 1.0),(0.1, 0.6), (0.0, 1.0)],
+                           [(0.5, 0.5),(0.5, 0.5),(0.4, 0.6), (0.3, 1.0),(0.6, 1.0),(0.1, 0.6), (0.4, 1.0),(0.9, 1.0),(0.1, 0.6), (0.0, 1.0)]]
 
+params2.item_feature_propensities=[0.1, 0.3, 0.9, 0.5, 0.6, 0.2, 0.5, 0.7, 0.6, 0.1]
