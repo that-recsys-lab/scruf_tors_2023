@@ -1,5 +1,5 @@
 [location]
-path = "../../data"
+path = "../data"
 overwrite = "true"
 
 [data]
