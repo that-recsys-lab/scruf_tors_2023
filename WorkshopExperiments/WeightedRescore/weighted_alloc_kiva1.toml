@@ -67,7 +67,7 @@ feature = "loan_buck_5"
 allocation_class = "weighted_product_allocation"
 
 [allocation.properties]
-compatibility_exponent = 1
+compatibility_exponent = 2
 fairness_exponent = 1
 
 [choice]
