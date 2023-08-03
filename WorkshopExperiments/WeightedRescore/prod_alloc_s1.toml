@@ -65,3 +65,11 @@ feature = "1"
 
 [allocation]
 allocation_class = "product_lottery"
+
+[choice]
+algorithm = "weighted_scoring"
+[choice.properties]
+
+recommender_weight = 0.8
+
+
