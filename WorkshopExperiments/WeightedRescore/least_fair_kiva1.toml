@@ -3,8 +3,8 @@ path = "../data"
 overwrite = "true"
 
 [data]
-rec_filename = "recs.csv"
-feature_filename = "item.csv"
+rec_filename = "kiva_recs.csv"
+feature_filename = "kiva_item.csv"
 
 [output]
 filename = "history_file_least_fair_weighted.json"
@@ -19,7 +19,7 @@ history_window_size = 100
 context_class = "csv_context"
 
 [context.properties]
-compatibility_file = "compat.csv"
+compatibility_file = "kiva_compat_dynamic.csv"
 
 [feature]
 
