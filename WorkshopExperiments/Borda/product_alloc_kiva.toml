@@ -7,7 +7,7 @@ rec_filename = "kiva_recs.csv"
 feature_filename = "kiva_item.csv"
 
 [output]
-filename = "history_file_product_lottery_rankedpairs_kiva.json"
+filename = "history_file_product_lottery_borda_kiva.json"
 
 [parameters]
 list_size = 10
