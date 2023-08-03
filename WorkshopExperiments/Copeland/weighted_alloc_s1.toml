@@ -1,13 +1,13 @@
 [location]
-path = "../../data"
+path = "../data"
 overwrite = "true"
 
 [data]
-rec_filename = "recs.csv"
-feature_filename = "item.csv"
+rec_filename = "recs_s1.csv"
+feature_filename = "items_s1.csv"
 
 [output]
-filename = "history_file_weighted_alloc_borda.json"
+filename = "history_file_weighted_alloc_copeland_s1.json"
 
 [parameters]
 list_size = 10
@@ -19,49 +19,49 @@ history_window_size = 100
 context_class = "csv_context"
 
 [context.properties]
-compatibility_file = "compat.csv"
+compatibility_file = "compat_s1.csv"
 
 [feature]
 
 [feature.one]
-name = "1"
-protected_feature = "1"
+name = "0"
+protected_feature = "0"
 protected_values = [1]
 
 [feature.two]
-name = "2"
-protected_feature = "2"
+name = "1"
+protected_feature = "1"
 protected_values = [1]
 
 [agent]
 
 [agent.one]
-name = "1"
+name = "0"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
 preference_function_class = "binary_preference"
 
 [agent.one.metric]
-feature = "1"
-proportion = 0.07
+feature = "0"
+proportion = 0.2
 
 [agent.one.preference]
 delta = 0.1
-feature = "1"
+feature = "0"
 
 [agent.two]
-name = "2"
+name = "1"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
 preference_function_class = "binary_preference"
 
 [agent.two.metric]
-feature = "2"
-proportion = 0.1
+feature = "1"
+proportion = 0.5
 
 [agent.two.preference]
 delta = 0.1
-feature = "2"
+feature = "1"
 
 [allocation]
 allocation_class = "weighted_product_allocation"
