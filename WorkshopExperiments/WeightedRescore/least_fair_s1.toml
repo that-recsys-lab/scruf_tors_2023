@@ -62,3 +62,20 @@ proportion = 0.5
 [agent.two.preference]
 delta = 0.1
 feature = "1"
+
+[allocation]
+allocation_class = "least_fair"
+
+[choice]
+algorithm = "weighted_scoring"
+[choice.properties]
+
+recommender_weight = 0.8
+
+[post]
+postprocess_class = "ndcg"
+
+[post.properties]
+filename = "Rescore_least_output_kiva.csv"
+threshold = "none"
+binary = "false"
