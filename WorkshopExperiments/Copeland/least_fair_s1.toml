@@ -74,4 +74,12 @@ tie_breaker = "None"
 ignore_weights = false
 recommender_weight = 0.8
 
+[post]
+postprocess_class = "ndcg"
+
+[post.properties]
+filename = "Copeland_least_s1.csv"
+threshold = "none"
+binary = "false"
+
 
