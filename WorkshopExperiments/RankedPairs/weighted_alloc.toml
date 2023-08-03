@@ -81,6 +81,6 @@ recommender_weight = 0.8
 postprocess_class = "ndcg"
 
 [post.properties]
-filename = "Rescore_least_output_kiva.csv"
+filename = "RankedPairs_weighted_output_s1.csv"
 threshold = "none"
 binary = "false"
