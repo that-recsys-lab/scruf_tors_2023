@@ -82,6 +82,6 @@ recommender_weight = 0.8
 postprocess_class = "ndcg"
 
 [post.properties]
-filename = "sample_output.csv"
+filename = "weighted_borda_s1.csv"
 threshold = "none"
 binary = "false"
