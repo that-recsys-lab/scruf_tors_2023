@@ -75,7 +75,7 @@ ignore_weights = false
 recommender_weight = 0.8
 
 [post]
-postprocess_class = "ndcg"
+postprocess_class = "exposure"
 
 [post.properties]
 filename = "RankedPairs_least_outputs1.csv"
