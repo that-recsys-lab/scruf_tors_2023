@@ -71,7 +71,7 @@ compatibility_exponent = 2
 fairness_exponent = 1
 
 [choice]
-algorithm = "weighted_scoring"
+choice_class = "weighted_scoring"
 [choice.properties]
 recommender_weight = 0.8
 

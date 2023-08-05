@@ -70,7 +70,7 @@ allocation_class = "static_lottery"
 weights = [["0", "0.0"], ["1", "0.0"]]
 
 [choice]
-algorithm = "whalrus_scoring"
+choice_class = "whalrus_scoring"
 [choice.properties]
 whalrus_rule = "RuleBorda"
 tie_breaker = "None"

@@ -68,7 +68,7 @@ feature = "loan_buck_5"
 allocation_class = "least_fair"
 
 [choice]
-algorithm = "whalrus_scoring"
+choice_class = "whalrus_scoring"
 [choice.properties]
 whalrus_rule = "RuleBorda"
 tie_breaker = "Random"

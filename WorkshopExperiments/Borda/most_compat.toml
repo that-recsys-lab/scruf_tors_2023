@@ -67,7 +67,7 @@ feature = "2"
 allocation_class = "most_compatible"
 
 [choice]
-algorithm = "whalrus_scoring"
+choice_class = "whalrus_scoring"
 [choice.properties]
 whalrus_rule = "RuleBorda"
 tie_breaker = "None"

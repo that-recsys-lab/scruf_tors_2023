@@ -72,7 +72,7 @@ compatibility_exponent = 2
 fairness_exponent = 1
 
 [choice]
-algorithm = "whalrus_scoring"
+choice_class = "whalrus_scoring"
 [choice.properties]
 whalrus_rule = "RuleRankedPairs"
 tie_breaker = "Random"
