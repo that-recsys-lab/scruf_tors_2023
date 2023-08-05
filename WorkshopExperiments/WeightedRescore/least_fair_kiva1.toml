@@ -7,7 +7,7 @@ rec_filename = "kiva_recs.csv"
 feature_filename = "kiva_item.csv"
 
 [output]
-filename = "history_file_least_fair_weighted.json"
+filename = "history_file_least_fair_rescore_kiva.json"
 
 [parameters]
 list_size = 10
@@ -76,6 +76,6 @@ recommender_weight = 0.8
 postprocess_class = "ndcg"
 
 [post.properties]
-filename = "Rescore_least_outputs1.csv"
+filename = "Rescore_least_kiva.csv"
 threshold = "none"
 binary = "false"

@@ -7,7 +7,7 @@ rec_filename = "kiva_recs.csv"
 feature_filename = "kiva_item.csv"
 
 [output]
-filename = "history_file_product_lottery_rankedpairs_kiva.json"
+filename = "history_file_weighted_alloc_rankedpairs_kiva.json"
 
 [parameters]
 list_size = 10
@@ -80,9 +80,9 @@ ignore_weights = false
 recommender_weight = 0.8
 
 [post]
-postprocess_class = "ndcg"
+postprocess_class = "exposure"
 
 [post.properties]
-filename = "RankedPairs_weighted_output_kiva.csv"
+filename = "RankedPairs_weighted_kiva.csv"
 threshold = "none"
 binary = "false"

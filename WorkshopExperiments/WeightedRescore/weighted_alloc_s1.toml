@@ -80,6 +80,6 @@ recommender_weight = 0.8
 postprocess_class = "ndcg"
 
 [post.properties]
-filename = "Rescore_prod_outputs1.csv"
+filename = "Rescore_weight_outputs1.csv"
 threshold = "none"
 binary = "false"
