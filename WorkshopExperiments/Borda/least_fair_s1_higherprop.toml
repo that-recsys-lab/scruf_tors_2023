@@ -7,7 +7,7 @@ rec_filename = "recs_s1.csv"
 feature_filename = "items_s1.csv"
 
 [output]
-filename = "history_file_least_fair_borda_s1.json"
+filename = "history_file_least_fair_borda_s1_5.json"
 
 [parameters]
 list_size = 10
@@ -43,7 +43,7 @@ preference_function_class = "binary_preference"
 
 [agent.one.metric]
 feature = "0"
-proportion = 0.2
+proportion = 0.5
 
 [agent.one.preference]
 delta = 0.1
@@ -78,6 +78,6 @@ recommender_weight = 0.5
 postprocess_class = "exposure"
 
 [post.properties]
-filename = "Borda_least_outputs1.csv"
+filename = "Borda_least_outputs15.csv"
 threshold = "none"
 binary = "false"
