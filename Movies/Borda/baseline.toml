@@ -24,44 +24,44 @@ compatibility_file = "compat.csv"
 [feature]
 
 [feature.one]
-name = "0"
-protected_feature = "0"
+name = "women_writer_director"
+protected_feature = "women_writer_director"
 protected_values = [1]
 
 [feature.two]
-name = "1"
-protected_feature = "1"
+name = "non-en"
+protected_feature = "non-en"
 protected_values = [1]
 
 [agent]
 
 [agent.one]
-name = "0"
+name = "women_writer_director"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
-preference_function_class = "binary_preference"
+preference_function_class = "cascade_preference"
 
 [agent.one.metric]
-feature = "0"
+feature = "women_writer_director"
 proportion = 0.2
 
 [agent.one.preference]
 delta = 0.1
-feature = "0"
+feature = "women_writer_director"
 
 [agent.two]
-name = "1"
+name = "non-en"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
-preference_function_class = "binary_preference"
+preference_function_class = "cascade_preference"
 
 [agent.two.metric]
-feature = "1"
+feature = "non-en"
 proportion = 0.2
 
 [agent.two.preference]
 delta = 0.1
-feature = "1"
+feature = "non-en"
 
 [allocation]
 allocation_class = "static_lottery"
@@ -81,6 +81,6 @@ recommender_weight = 0.8
 postprocess_class = "exposure"
 
 [post.properties]
-filename = "Baseline_s1.csv"
+filename = "Baseline_movie.csv"
 threshold = "none"
 binary = "false"
