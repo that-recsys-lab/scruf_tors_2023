@@ -3,11 +3,11 @@ path = "../data"
 overwrite = "true"
 
 [data]
-rec_filename = "recs_s1.csv"
-feature_filename = "items_s1.csv"
+rec_filename = "recs.csv"
+feature_filename = "items.csv"
 
 [output]
-filename = "history_file_baseline_s1.json"
+filename = "history_file_baseline_movie.json"
 
 [parameters]
 list_size = 10
@@ -19,7 +19,7 @@ history_window_size = 100
 context_class = "csv_context"
 
 [context.properties]
-compatibility_file = "compat_s1.csv"
+compatibility_file = "compat.csv"
 
 [feature]
 
