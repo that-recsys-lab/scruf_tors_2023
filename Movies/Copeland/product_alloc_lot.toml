@@ -78,6 +78,6 @@ recommender_weight = 0.8
 postprocess_class = "exposure"
 
 [post.properties]
-filename = "Copeland_prod_movie.csv"
+filename = "Copeland_product_movie.csv"
 threshold = "none"
 binary = "false"
