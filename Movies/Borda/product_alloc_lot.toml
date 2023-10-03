@@ -78,6 +78,6 @@ recommender_weight = 0.8
 postprocess_class = "exposure"
 
 [post.properties]
-filename = "Borda_prod.csv"
+filename = "Borda_prod_movie.csv"
 threshold = "none"
 binary = "false"
