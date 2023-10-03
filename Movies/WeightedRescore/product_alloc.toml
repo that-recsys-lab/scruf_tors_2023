@@ -7,7 +7,7 @@ rec_filename = "recs.csv"
 feature_filename = "items.csv"
 
 [output]
-filename = "history_file_resource_prod_movie.json"
+filename = "history_file_resource_product_movie.json"
 
 [parameters]
 list_size = 10
@@ -76,7 +76,7 @@ recommender_weight = 0.1
 postprocess_class = "exposure"
 
 [post.properties]
-filename = "Rescore_prod_movie.csv"
+filename = "Rescore_product_movie.csv"
 threshold = "none"
 binary = "false"
 
