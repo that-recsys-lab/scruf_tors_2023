@@ -3,11 +3,11 @@ path = "../../data"
 overwrite = "true"
 
 [data]
-rec_filename = "recs.csv"
+rec_filename = "recs_1.csv"
 feature_filename = "items.csv"
 
 [output]
-filename = "history_file_borda_product_movie_9.json"
+filename = "history_file_borda_product_movie_1_9.json"
 
 [parameters]
 list_size = 10
