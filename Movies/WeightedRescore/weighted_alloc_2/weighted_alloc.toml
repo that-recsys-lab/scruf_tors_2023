@@ -7,7 +7,7 @@ rec_filename = "recs_2.csv"
 feature_filename = "items.csv"
 
 [output]
-filename = "history_file_resource_weight_movie_2.json"
+filename = "history_file_resource_weight_movie_2git.json"
 
 [parameters]
 list_size = 10
