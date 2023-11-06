@@ -1,0 +1,414 @@
+[location]
+path = "data"
+overwrite = "true"
+
+[data]
+rec_filename = "recs_1.csv"
+feature_filename = "items.csv"
+
+[output]
+filename = "history_file_baseline_OFair_movie.json"
+
+[parameters]
+list_size = 10
+iterations = -1
+initialize = "skip"
+history_window_size = 100
+
+[context]
+context_class = "csv_context"
+
+[context.properties]
+compatibility_file = "compat.csv"
+
+
+
+[agent]
+
+[agent.one]
+name = "women_writer_director"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "cascade_preference"
+
+[agent.one.metric]
+feature = "women_writer_director"
+proportion = 0.2
+
+[agent.one.preference]
+delta = 0.1
+feature = "women_writer_director"
+
+[agent.two]
+name = "non-en"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "cascade_preference"
+
+[agent.two.metric]
+feature = "non-en"
+proportion = 0.2
+
+[agent.two.preference]
+delta = 0.1
+feature = "non-en"
+
+[allocation]
+allocation_class = "weighted_product_allocation"
+
+[allocation.properties]
+compatibility_exponent = 2
+fairness_exponent = 1
+
+[choice]
+choice_class = "OFAIR"
+
+[choice.properties]
+recommender_weight = 0.8
+non_sensitive_discount = 100
+epsilon = 0.00000000000000022
+alpha = 1.0
+
+[post]
+postprocess_class = "exposure"
+
+[post.properties]
+filename = "Baseline_movie.csv"
+threshold = "none"
+binary = "false"
+
+
+[feature]
+[feature.0]
+name = "Action"
+protected_feature = "Action"
+[feature.1]
+name = "Adult"
+protected_feature = "Adult"
+[feature.2]
+name = "Adventure"
+protected_feature = "Adventure"
+[feature.3]
+name = "Animation"
+protected_feature = "Animation"
+[feature.4]
+name = "Comedy"
+protected_feature = "Comedy"
+[feature.5]
+name = "Crime"
+protected_feature = "Crime"
+[feature.6]
+name = "Documentary"
+protected_feature = "Documentary"
+[feature.7]
+name = "Drama"
+protected_feature = "Drama"
+[feature.8]
+name = "Family"
+protected_feature = "Family"
+[feature.9]
+name = "Fantasy"
+protected_feature = "Fantasy"
+[feature.10]
+name = "Foreign"
+protected_feature = "Foreign"
+[feature.11]
+name = "History"
+protected_feature = "History"
+[feature.12]
+name = "Horror"
+protected_feature = "Horror"
+[feature.13]
+name = "Music"
+protected_feature = "Music"
+[feature.14]
+name = "Mystery"
+protected_feature = "Mystery"
+[feature.15]
+name = "Romance"
+protected_feature = "Romance"
+[feature.16]
+name = "TV"
+protected_feature = "TV"
+[feature.17]
+name = "Thriller"
+protected_feature = "Thriller"
+[feature.18]
+name = "War"
+protected_feature = "War"
+[feature.19]
+name = "Western"
+protected_feature = "Western"
+[feature.20]
+name = "af"
+protected_feature = "af"
+[feature.21]
+name = "am"
+protected_feature = "am"
+[feature.22]
+name = "ar"
+protected_feature = "ar"
+[feature.23]
+name = "bg"
+protected_feature = "bg"
+[feature.24]
+name = "bn"
+protected_feature = "bn"
+[feature.25]
+name = "bo"
+protected_feature = "bo"
+[feature.26]
+name = "bs"
+protected_feature = "bs"
+[feature.27]
+name = "ca"
+protected_feature = "ca"
+[feature.28]
+name = "cn"
+protected_feature = "cn"
+[feature.29]
+name = "co"
+protected_feature = "co"
+[feature.30]
+name = "cs"
+protected_feature = "cs"
+[feature.31]
+name = "cy"
+protected_feature = "cy"
+[feature.32]
+name = "da"
+protected_feature = "da"
+[feature.33]
+name = "de"
+protected_feature = "de"
+[feature.34]
+name = "el"
+protected_feature = "el"
+[feature.35]
+name = "en"
+protected_feature = "en"
+[feature.36]
+name = "eo"
+protected_feature = "eo"
+[feature.37]
+name = "es"
+protected_feature = "es"
+[feature.38]
+name = "et"
+protected_feature = "et"
+[feature.39]
+name = "eu"
+protected_feature = "eu"
+[feature.40]
+name = "fa"
+protected_feature = "fa"
+[feature.41]
+name = "fi"
+protected_feature = "fi"
+[feature.42]
+name = "fr"
+protected_feature = "fr"
+[feature.43]
+name = "ga"
+protected_feature = "ga"
+[feature.44]
+name = "gd"
+protected_feature = "gd"
+[feature.45]
+name = "gl"
+protected_feature = "gl"
+[feature.46]
+name = "gn"
+protected_feature = "gn"
+[feature.47]
+name = "he"
+protected_feature = "he"
+[feature.48]
+name = "hi"
+protected_feature = "hi"
+[feature.49]
+name = "hr"
+protected_feature = "hr"
+[feature.50]
+name = "hu"
+protected_feature = "hu"
+[feature.51]
+name = "id"
+protected_feature = "id"
+[feature.52]
+name = "is"
+protected_feature = "is"
+[feature.53]
+name = "it"
+protected_feature = "it"
+[feature.54]
+name = "ja"
+protected_feature = "ja"
+[feature.55]
+name = "ka"
+protected_feature = "ka"
+[feature.56]
+name = "kk"
+protected_feature = "kk"
+[feature.57]
+name = "km"
+protected_feature = "km"
+[feature.58]
+name = "ko"
+protected_feature = "ko"
+[feature.59]
+name = "ku"
+protected_feature = "ku"
+[feature.60]
+name = "kw"
+protected_feature = "kw"
+[feature.61]
+name = "la"
+protected_feature = "la"
+[feature.62]
+name = "lb"
+protected_feature = "lb"
+[feature.63]
+name = "ln"
+protected_feature = "ln"
+[feature.64]
+name = "lt"
+protected_feature = "lt"
+[feature.65]
+name = "mi"
+protected_feature = "mi"
+[feature.66]
+name = "mn"
+protected_feature = "mn"
+[feature.67]
+name = "mr"
+protected_feature = "mr"
+[feature.68]
+name = "ms"
+protected_feature = "ms"
+[feature.69]
+name = "mt"
+protected_feature = "mt"
+[feature.70]
+name = "ne"
+protected_feature = "ne"
+[feature.71]
+name = "nl"
+protected_feature = "nl"
+[feature.72]
+name = "no"
+protected_feature = "no"
+[feature.73]
+name = "non-en"
+protected_feature = "non-en"
+[feature.74]
+name = "nv"
+protected_feature = "nv"
+[feature.75]
+name = "pa"
+protected_feature = "pa"
+[feature.76]
+name = "pl"
+protected_feature = "pl"
+[feature.77]
+name = "ps"
+protected_feature = "ps"
+[feature.78]
+name = "pt"
+protected_feature = "pt"
+[feature.79]
+name = "qu"
+protected_feature = "qu"
+[feature.80]
+name = "ro"
+protected_feature = "ro"
+[feature.81]
+name = "ru"
+protected_feature = "ru"
+[feature.82]
+name = "sa"
+protected_feature = "sa"
+[feature.83]
+name = "sc"
+protected_feature = "sc"
+[feature.84]
+name = "sci_fi"
+protected_feature = "sci_fi"
+[feature.85]
+name = "se"
+protected_feature = "se"
+[feature.86]
+name = "sh"
+protected_feature = "sh"
+[feature.87]
+name = "si"
+protected_feature = "si"
+[feature.88]
+name = "sk"
+protected_feature = "sk"
+[feature.89]
+name = "sl"
+protected_feature = "sl"
+[feature.90]
+name = "so"
+protected_feature = "so"
+[feature.91]
+name = "sq"
+protected_feature = "sq"
+[feature.92]
+name = "sr"
+protected_feature = "sr"
+[feature.93]
+name = "sv"
+protected_feature = "sv"
+[feature.94]
+name = "sw"
+protected_feature = "sw"
+[feature.95]
+name = "ta"
+protected_feature = "ta"
+[feature.96]
+name = "te"
+protected_feature = "te"
+[feature.97]
+name = "th"
+protected_feature = "th"
+[feature.98]
+name = "tl"
+protected_feature = "tl"
+[feature.99]
+name = "tr"
+protected_feature = "tr"
+[feature.100]
+name = "tt"
+protected_feature = "tt"
+[feature.101]
+name = "uk"
+protected_feature = "uk"
+[feature.102]
+name = "ur"
+protected_feature = "ur"
+[feature.103]
+name = "vi"
+protected_feature = "vi"
+[feature.104]
+name = "wo"
+protected_feature = "wo"
+[feature.105]
+name = "women_writer_director"
+protected_feature = "women_writer_director"
+[feature.106]
+name = "xh"
+protected_feature = "xh"
+[feature.107]
+name = "xx"
+protected_feature = "xx"
+[feature.108]
+name = "yi"
+protected_feature = "yi"
+[feature.109]
+name = "zh"
+protected_feature = "zh"
+[feature.110]
+name = "zu"
+protected_feature = "zu"
