@@ -301,6 +301,7 @@ protected_feature = "no"
 [feature.seventy-four]
 name = "non-en"
 protected_feature = "non-en"
+protected_values = 1
 [feature.seventy-five]
 name = "nv"
 protected_feature = "nv"
@@ -397,6 +398,7 @@ protected_feature = "wo"
 [feature.onehundredandsix]
 name = "women_writer_director"
 protected_feature = "women_writer_director"
+protected_values = 1
 [feature.onehundredandseven]
 name = "xh"
 protected_feature = "xh"
