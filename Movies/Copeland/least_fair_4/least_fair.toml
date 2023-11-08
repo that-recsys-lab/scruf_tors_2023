@@ -43,7 +43,7 @@ preference_function_class = "cascade_preference"
 
 [agent.one.metric]
 feature = "women_writer_director"
-proportion = 0.2
+proportion = 0.12
 
 [agent.one.preference]
 delta = 0.1
@@ -57,12 +57,11 @@ preference_function_class = "cascade_preference"
 
 [agent.two.metric]
 feature = "non-en"
-proportion = 0.2
+proportion = 0.28
 
 [agent.two.preference]
 delta = 0.1
 feature = "non-en"
-
 [allocation]
 allocation_class = "least_fair"
 

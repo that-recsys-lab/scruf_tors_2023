@@ -3,11 +3,11 @@ path = "../../data"
 overwrite = "true"
 
 [data]
-rec_filename = "recs.csv"
+rec_filename = "recs_2.csv"
 feature_filename = "items.csv"
 
 [output]
-filename = "history_file_borda_product_movie_8.json"
+filename = "history_file_borda_product_movie_2_8.json"
 
 [parameters]
 list_size = 10
@@ -65,7 +65,7 @@ binary = "false"
 
 [agent.one.metric]
 feature = "women_writer_director"
-proportion = 0.2
+proportion = 0.12
 
 [agent.one.preference]
 delta = 0.1
@@ -73,7 +73,7 @@ feature = "women_writer_director"
 
 [agent.two.metric]
 feature = "non-en"
-proportion = 0.2
+proportion = 0.28
 
 [agent.two.preference]
 delta = 0.1
