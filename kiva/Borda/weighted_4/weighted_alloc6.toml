@@ -3,11 +3,11 @@ path = "../../data"
 overwrite = "true"
 
 [data]
-rec_filename = "recs.csv"
+rec_filename = "recs_4.csv"
 feature_filename = "items.csv"
 
 [output]
-filename = "history_file_broda_weighted_movie_6.json"
+filename = "history_file_broda_weighted_movie_4_6.json"
 
 [parameters]
 list_size = 10
@@ -31,26 +31,26 @@ postprocess_class = "exposure"
 compatibility_file = "compat.csv"
 
 [feature.one]
-name = "women_writer_director"
-protected_feature = "women_writer_director"
+name = "COUNTRY_low_pfr"
+protected_feature = "COUNTRY_low_pfr"
 protected_values = [ 1,]
 
 [feature.two]
-name = "non-en"
-protected_feature = "non-en"
+name = "loan_buck_5"
+protected_feature = "loan_buck_5"
 protected_values = [ 1,]
 
 [agent.one]
-name = "women_writer_director"
+name = "COUNTRY_low_pfr"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
-preference_function_class = "cascade_preference"
+preference_function_class = "binary_preference"
 
 [agent.two]
-name = "non-en"
+name = "loan_buck_5"
 metric_class = "proportional_item"
 compatibility_class = "context_compatibility"
-preference_function_class = "cascade_preference"
+preference_function_class = "binary_preference"
 
 [allocation.properties]
 compatibility_exponent = 2
@@ -68,17 +68,17 @@ threshold = "none"
 binary = "false"
 
 [agent.one.metric]
-feature = "women_writer_director"
-proportion = 0.2
+feature = "COUNTRY_low_pfr"
+proportion = 0.8
 
 [agent.one.preference]
 delta = 0.1
-feature = "women_writer_director"
+feature = "COUNTRY_low_pfr"
 
 [agent.two.metric]
-feature = "non-en"
-proportion = 0.2
+feature = "loan_buck_5"
+proportion = 0.1
 
 [agent.two.preference]
-delta = 0.1
-feature = "non-en"
+delta = 0.2
+feature = "loan_buck_5"

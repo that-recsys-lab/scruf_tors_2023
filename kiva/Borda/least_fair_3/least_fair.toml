@@ -21,17 +21,7 @@ context_class = "csv_context"
 [context.properties]
 compatibility_file = "compat.csv"
 
-[feature]
 
-[feature.one]
-name = "women_writer_director"
-protected_feature = "women_writer_director"
-protected_values = [1]
-
-[feature.two]
-name = "non-en"
-protected_feature = "non-en"
-protected_values = [1]
 
 [feature]
 
