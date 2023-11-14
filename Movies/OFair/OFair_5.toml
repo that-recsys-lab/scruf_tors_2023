@@ -1,0 +1,416 @@
+[location]
+path = "../data"
+overwrite = "true"
+
+[data]
+rec_filename = "recs_1.csv"
+feature_filename = "items.csv"
+
+[output]
+filename = "history_file_baseline_OFair_movie_5.json"
+
+[parameters]
+list_size = 10
+iterations = -1
+initialize = "skip"
+history_window_size = 100
+
+[context]
+context_class = "csv_context"
+
+[context.properties]
+compatibility_file = "compat.csv"
+
+
+
+[agent]
+
+[agent.one]
+name = "women_writer_director"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "cascade_preference"
+
+[agent.one.metric]
+feature = "women_writer_director"
+proportion = 0.12
+
+[agent.one.preference]
+delta = 0.2
+feature = "women_writer_director"
+
+[agent.two]
+name = "non-en"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "cascade_preference"
+
+[agent.two.metric]
+feature = "non-en"
+proportion = 0.28
+
+[agent.two.preference]
+delta = 0.1
+feature = "non-en"
+
+[allocation]
+allocation_class = "weighted_product_allocation"
+
+[allocation.properties]
+compatibility_exponent = 2
+fairness_exponent = 1
+
+[choice]
+choice_class = "OFAIR"
+
+[choice.properties]
+recommender_weight = 0.51
+non_sensitive_discount = 100
+epsilon = 0.00000000000000022
+alpha = 1.0
+
+[post]
+postprocess_class = "exposure"
+
+[post.properties]
+filename = "Baseline_kiva.csv"
+threshold = "none"
+binary = "false"
+
+
+[feature]
+[feature.one]
+name = "Action"
+protected_feature = "Action"
+[feature.two]
+name = "Adult"
+protected_feature = "Adult"
+[feature.three]
+name = "Adventure"
+protected_feature = "Adventure"
+[feature.four]
+name = "Animation"
+protected_feature = "Animation"
+[feature.five]
+name = "Comedy"
+protected_feature = "Comedy"
+[feature.six]
+name = "Crime"
+protected_feature = "Crime"
+[feature.seven]
+name = "Documentary"
+protected_feature = "Documentary"
+[feature.eight]
+name = "Drama"
+protected_feature = "Drama"
+[feature.nine]
+name = "Family"
+protected_feature = "Family"
+[feature.ten]
+name = "Fantasy"
+protected_feature = "Fantasy"
+[feature.eleven]
+name = "Foreign"
+protected_feature = "Foreign"
+[feature.twelve]
+name = "History"
+protected_feature = "History"
+[feature.thirteen]
+name = "Horror"
+protected_feature = "Horror"
+[feature.fourteen]
+name = "Music"
+protected_feature = "Music"
+[feature.fifteen]
+name = "Mystery"
+protected_feature = "Mystery"
+[feature.sixteen]
+name = "Romance"
+protected_feature = "Romance"
+[feature.seventeen]
+name = "TV"
+protected_feature = "TV"
+[feature.eighteen]
+name = "Thriller"
+protected_feature = "Thriller"
+[feature.nineteen]
+name = "War"
+protected_feature = "War"
+[feature.twenty]
+name = "Western"
+protected_feature = "Western"
+[feature.twenty-one]
+name = "af"
+protected_feature = "af"
+[feature.twenty-two]
+name = "am"
+protected_feature = "am"
+[feature.twenty-three]
+name = "ar"
+protected_feature = "ar"
+[feature.twenty-four]
+name = "bg"
+protected_feature = "bg"
+[feature.twenty-five]
+name = "bn"
+protected_feature = "bn"
+[feature.twenty-six]
+name = "bo"
+protected_feature = "bo"
+[feature.twenty-seven]
+name = "bs"
+protected_feature = "bs"
+[feature.twenty-eight]
+name = "ca"
+protected_feature = "ca"
+[feature.twenty-nine]
+name = "cn"
+protected_feature = "cn"
+[feature.thirty]
+name = "co"
+protected_feature = "co"
+[feature.thirty-one]
+name = "cs"
+protected_feature = "cs"
+[feature.thirty-two]
+name = "cy"
+protected_feature = "cy"
+[feature.thirty-three]
+name = "da"
+protected_feature = "da"
+[feature.thirty-four]
+name = "de"
+protected_feature = "de"
+[feature.thirty-five]
+name = "el"
+protected_feature = "el"
+[feature.thirty-six]
+name = "en"
+protected_feature = "en"
+[feature.thirty-seven]
+name = "eo"
+protected_feature = "eo"
+[feature.thirty-eight]
+name = "es"
+protected_feature = "es"
+[feature.thirty-nine]
+name = "et"
+protected_feature = "et"
+[feature.forty]
+name = "eu"
+protected_feature = "eu"
+[feature.forty-one]
+name = "fa"
+protected_feature = "fa"
+[feature.forty-two]
+name = "fi"
+protected_feature = "fi"
+[feature.forty-three]
+name = "fr"
+protected_feature = "fr"
+[feature.forty-four]
+name = "ga"
+protected_feature = "ga"
+[feature.forty-five]
+name = "gd"
+protected_feature = "gd"
+[feature.forty-six]
+name = "gl"
+protected_feature = "gl"
+[feature.forty-seven]
+name = "gn"
+protected_feature = "gn"
+[feature.forty-eight]
+name = "he"
+protected_feature = "he"
+[feature.forty-nine]
+name = "hi"
+protected_feature = "hi"
+[feature.fifty]
+name = "hr"
+protected_feature = "hr"
+[feature.fifty-one]
+name = "hu"
+protected_feature = "hu"
+[feature.fifty-two]
+name = "id"
+protected_feature = "id"
+[feature.fifty-three]
+name = "is"
+protected_feature = "is"
+[feature.fifty-four]
+name = "it"
+protected_feature = "it"
+[feature.fifty-five]
+name = "ja"
+protected_feature = "ja"
+[feature.fifty-six]
+name = "ka"
+protected_feature = "ka"
+[feature.fifty-seven]
+name = "kk"
+protected_feature = "kk"
+[feature.fifty-eight]
+name = "km"
+protected_feature = "km"
+[feature.fifty-nine]
+name = "ko"
+protected_feature = "ko"
+[feature.sixty]
+name = "ku"
+protected_feature = "ku"
+[feature.sixty-one]
+name = "kw"
+protected_feature = "kw"
+[feature.sixty-two]
+name = "la"
+protected_feature = "la"
+[feature.sixty-three]
+name = "lb"
+protected_feature = "lb"
+[feature.sixty-four]
+name = "ln"
+protected_feature = "ln"
+[feature.sixty-five]
+name = "lt"
+protected_feature = "lt"
+[feature.sixty-six]
+name = "mi"
+protected_feature = "mi"
+[feature.sixty-seven]
+name = "mn"
+protected_feature = "mn"
+[feature.sixty-eight]
+name = "mr"
+protected_feature = "mr"
+[feature.sixty-nine]
+name = "ms"
+protected_feature = "ms"
+[feature.seventy]
+name = "mt"
+protected_feature = "mt"
+[feature.seventy-one]
+name = "ne"
+protected_feature = "ne"
+[feature.seventy-two]
+name = "nl"
+protected_feature = "nl"
+[feature.seventy-three]
+name = "no"
+protected_feature = "no"
+[feature.seventy-four]
+name = "non-en"
+protected_feature = "non-en"
+protected_values = 1
+[feature.seventy-five]
+name = "nv"
+protected_feature = "nv"
+[feature.seventy-six]
+name = "pa"
+protected_feature = "pa"
+[feature.seventy-seven]
+name = "pl"
+protected_feature = "pl"
+[feature.seventy-eight]
+name = "ps"
+protected_feature = "ps"
+[feature.seventy-nine]
+name = "pt"
+protected_feature = "pt"
+[feature.eighty]
+name = "qu"
+protected_feature = "qu"
+[feature.eighty-one]
+name = "ro"
+protected_feature = "ro"
+[feature.eighty-two]
+name = "ru"
+protected_feature = "ru"
+[feature.eighty-three]
+name = "sa"
+protected_feature = "sa"
+[feature.eighty-four]
+name = "sc"
+protected_feature = "sc"
+[feature.eighty-five]
+name = "sci_fi"
+protected_feature = "sci_fi"
+[feature.eighty-six]
+name = "se"
+protected_feature = "se"
+[feature.eighty-seven]
+name = "sh"
+protected_feature = "sh"
+[feature.eighty-eight]
+name = "si"
+protected_feature = "si"
+[feature.eighty-nine]
+name = "sk"
+protected_feature = "sk"
+[feature.ninety]
+name = "sl"
+protected_feature = "sl"
+[feature.ninety-one]
+name = "so"
+protected_feature = "so"
+[feature.ninety-two]
+name = "sq"
+protected_feature = "sq"
+[feature.ninety-three]
+name = "sr"
+protected_feature = "sr"
+[feature.ninety-four]
+name = "sv"
+protected_feature = "sv"
+[feature.ninety-five]
+name = "sw"
+protected_feature = "sw"
+[feature.ninety-six]
+name = "ta"
+protected_feature = "ta"
+[feature.ninety-seven]
+name = "te"
+protected_feature = "te"
+[feature.ninety-eight]
+name = "th"
+protected_feature = "th"
+[feature.ninety-nine]
+name = "tl"
+protected_feature = "tl"
+[feature.onehundred]
+name = "tr"
+protected_feature = "tr"
+[feature.onehundredandone]
+name = "tt"
+protected_feature = "tt"
+[feature.onehundredandtwo]
+name = "uk"
+protected_feature = "uk"
+[feature.onehundredandthree]
+name = "ur"
+protected_feature = "ur"
+[feature.onehundredandfour]
+name = "vi"
+protected_feature = "vi"
+[feature.onehundredandfive]
+name = "wo"
+protected_feature = "wo"
+[feature.onehundredandsix]
+name = "women_writer_director"
+protected_feature = "women_writer_director"
+protected_values = 1
+[feature.onehundredandseven]
+name = "xh"
+protected_feature = "xh"
+[feature.onehundredandeight]
+name = "xx"
+protected_feature = "xx"
+[feature.onehundredandnine]
+name = "yi"
+protected_feature = "yi"
+[feature.onehundredandten]
+name = "zh"
+protected_feature = "zh"
+[feature.onehundredandeleven]
+name = "zu"
+protected_feature = "zu"
